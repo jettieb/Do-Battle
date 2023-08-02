@@ -59,7 +59,7 @@ body{
     padding-right: 20px;
 }
 
-#getInform > button{
+#getInform > #button{
     border: none;
     background-color: #FF5C00;
     border-radius: 15px;
@@ -78,11 +78,15 @@ body{
     margin-top: 10px;
 }
 
-button{
+#button{
     margin-top: 30px;
 }
 
 #agree > label{
     font-size: 14px;
     font-weight: 700;
+}
+
+#agreecheck{
+    accent-color: #FF5C00;
 }

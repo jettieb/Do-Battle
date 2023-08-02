@@ -17,23 +17,21 @@ body{
     margin: 0px 40px;
 }
 
-#login > input, button{
-    margin-top: 30px;
-    height: 50px;
+#button{
+    margin: 50px 0px 20px 0px;
 }
 
-#login > input{
+#id, #pw{
     border: 1px gray solid;
     border-radius: 10px;
     padding-left: 20px;
     font-size: 15px;
-}
-
-input{
     padding-right: 20px;
+    margin-top: 30px;
+    height: 50px;
 }
 
-#login > button{
+#login > #button, button{
     border: none;
     background-color: #FF5C00;
     border-radius: 15px;
