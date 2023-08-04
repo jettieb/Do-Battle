@@ -6,7 +6,7 @@ body{
 #logo{
     display:flex;
     justify-content: center;
-    padding: 50% 0px 20% 0px;
+    padding: 20vh 0px 10vh 0px;
     height: 80px;
 }
 
