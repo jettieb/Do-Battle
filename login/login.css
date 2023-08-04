@@ -14,11 +14,11 @@ body{
 #login{
     display:flex;
     flex-direction : column;
-    margin: 0px 40px;
+    margin: 0px 10%;
 }
 
 #button{
-    margin: 50px 0px 20px 0px;
+    margin: 40px 0px 20px 0px;
 }
 
 #id, #pw{
