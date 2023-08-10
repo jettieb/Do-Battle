@@ -14,10 +14,10 @@ body{
 }
 
 #text{
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 26px;
+    font-weight: 600;
     text-align: center;
-    margin-top: 130px;
+    margin-top: 50px;
     margin-bottom: 30px;
 }
 
@@ -30,7 +30,6 @@ body{
 #about-code{
     font-size: 18px;
     margin-bottom: 15px;
-    font-weight: 500;
 }
 
 #button{

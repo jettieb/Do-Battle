@@ -32,7 +32,7 @@ body{
 #make-start{
     margin: 45px 0px 0px 40px;
     text-align: start;
-    font-size: 20px;
+    font-size: 23px;
     line-height: 32px;
 }
 
@@ -94,4 +94,5 @@ input[type='date']::before {
 
 select option[disabled] {
 	display: none;
+    color: gray;
 }

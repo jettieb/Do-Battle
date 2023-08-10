@@ -53,8 +53,8 @@ body{
 
 #battle-name{
     margin-top: 20px;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 500;
 }
 
 #battle-date{
@@ -63,8 +63,8 @@ body{
 
 #versus{
     font-size: 28px;
-    font-weight: 700;
-    margin-top: 20px;
+    font-weight: 600;
+    margin-top: 5px;
     text-align: end;
     padding-right: 30px;
 }

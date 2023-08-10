@@ -44,11 +44,14 @@ body{
 }
 
 #text{
-    font-size: 25px;
-    font-weight: bold;
+    font-size: 24px;
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
+}
+
+#text > span{
+    font-weight: bold;
 }
 
 #about-code{
@@ -59,7 +62,6 @@ body{
 
 label{
     font-size: 18px;
-    font-weight: 500;
     margin-bottom: 15px;
     text-align: center;
 }

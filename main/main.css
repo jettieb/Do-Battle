@@ -10,7 +10,6 @@ body{
     height: 275px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    margin-bottom: 25px;
 }
 
 #top-menubar{
@@ -30,21 +29,22 @@ body{
     padding: 50px 0px 60px 0px;
     text-align: start;
     margin-left: 40px;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 25px;
 }
 
 #welcome > b{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 /*하단바*/
 #main-bottom{
-    margin: 0px 30px;
+    margin: 25px 30px 0px 30px;
 }
 
 #write{
-    font-size: 17px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
 #bottom-box{
@@ -61,8 +61,8 @@ body{
 
 #battle-name{
     margin-top: 20px;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: 500;
 }
 
 #battle-date{
@@ -71,8 +71,8 @@ body{
 
 #versus{
     font-size: 28px;
-    font-weight: 700;
-    margin-top: 20px;
+    font-weight: 600;
+    margin-top: 5px;
     text-align: end;
     padding-right: 30px;
 }
