@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="calender.css" rel="stylesheet">
+    <script src="calender.js"></script>
     <title>Do battle</title>
 </head>
 <body>
@@ -12,13 +13,12 @@
 
     </div>
 
-    <div id="calender">
+    <div>
         <table class="Calendar">
             <thead>
                 <tr>
                     <td colspan="5">
-                        <span id="calYear"></span>년
-                        <span id="calMonth"></span>월
+                        <span id="calYear"></span><span>.</span><span id="calMonth"></span>
                     </td>
                     <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
                     <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>

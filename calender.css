@@ -1,3 +1,18 @@
 body{
     background-color: #FDD67C;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0px;
+}
+
+/*달력*/
+.Calendar{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+span{
+    color: #FF5C00;
+    font-size: 30px;
+    font-weight: bold;
 }

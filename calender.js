@@ -1,6 +1,59 @@
-let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
-let today = new Date();     // 페이지를 로드한 날짜를 저장
+window.onload = function () { buildCalendar(); }
 
-function buildCalender(){
+let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
+let today = new Date();     // 오늘 날 저장용
+
+function buildCalendar(){
+    let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);   //이번달 1일
+    let lastDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth()+1, 0);  //이번달 마지막일
     
+    let Calendar_tbody = document.querySelector(".Calendar > tbody");
+    document.getElementById("calYear").innerText = nowMonth.getFullYear();
+    document.getElementById("calMonth").innerText = nowMonth.getMonth() + 1;
+
+    //달 옮길 떄 이전것 남아있는것 막기
+    while (Calendar_tbody.rows.length > 0) {          
+        Calendar_tbody.deleteRow(Calendar_tbody.rows.length - 1);
+    }
+
+    //달력만들기 시작
+    let nowRow = Calendar_tbody.insertRow();
+    
+    //1일 이전 달력
+    for (let day = 0; day < firstDate.getDay(); day++) {
+        let nowColumn = nowRow.insertCell();
+    }
+
+    //1일 이후 달력
+    let nowDay = new Date(firstDate); //1일부터 시작
+    while (nowDay <= lastDate) {
+        if (nowDay.getDay() === 0) { // 일요일인 경우 새로운 행을 추가
+            nowRow = Calendar_tbody.insertRow();
+        }
+        let nowColumn = nowRow.insertCell();
+        
+        //불svg 넣기
+        let newDivFire = document.createElement("div");
+        let imgElement = document.createElement("img");
+        imgElement.src = "image/cal-fire-white.svg";  // 이미지 파일의 경로로 설정
+        newDivFire.appendChild(imgElement);
+        nowColumn.appendChild(newDivFire);
+        //날짜 글씨 넣기
+        let newDivDate = document.createElement("div");
+        newDivDate.innerHTML = nowDay.getDate();        // 추가한 열에 날짜 입력
+        nowColumn.appendChild(newDivDate);
+
+        // 다음 날짜로 이동
+        nowDay.setDate(nowDay.getDate() + 1); 
+    }
+}
+
+function prevCalendar(){
+    nowMonth.setMonth(nowMonth.getMonth()-1);
+    buildCalendar(); 
+}
+
+function nextCalendar(){
+    nowMonth.setMonth(nowMonth.getMonth()+1);
+    buildCalendar();
 }
