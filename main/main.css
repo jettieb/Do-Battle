@@ -30,7 +30,8 @@ body{
     text-align: start;
     margin-left: 40px;
     font-size: 20px;
-    line-height: 25px;
+    line-height: 28px;
+    font-weight: 300;
 }
 
 #welcome > b{
