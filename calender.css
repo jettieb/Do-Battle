@@ -56,6 +56,11 @@ tbody > tr > td > div:nth-child(2){
     font-size: 14px;
 }
 
+.today{
+    color: #FF5C00;
+    font-weight: bold;
+}
+
 /*하단 배틀결과*/
 .battle-result{
     background-color: #FFF7E8;

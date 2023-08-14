@@ -43,6 +43,13 @@ function buildCalendar(){
         newDivDate.innerHTML = nowDay.getDate();        // 추가한 열에 날짜 입력
         nowColumn.appendChild(newDivDate);
 
+        //오늘 날짜 주황색으로 표시
+        if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()){
+            newDivDate.className = "today";
+            // document.getElementsByClassName("today").style.color = '#FF5C00';
+            console.log(nowDay);
+        }
+
         // 다음 날짜로 이동
         nowDay.setDate(nowDay.getDate() + 1); 
     }
@@ -57,3 +64,7 @@ function nextCalendar(){
     nowMonth.setMonth(nowMonth.getMonth()+1);
     buildCalendar();
 }
+
+// document.addEventListener('mouseover', function (event) {
+    
+// });
