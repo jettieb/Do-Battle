@@ -1,4 +1,4 @@
-window.onload = function () { buildCalendar(); }
+window.onload = function () {buildCalendar();}
 
 let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
 let today = new Date();     // 오늘 날 저장용
@@ -18,7 +18,7 @@ function buildCalendar(){
 
     //달력만들기 시작
     let nowRow = Calendar_tbody.insertRow();
-    
+
     //1일 이전 달력
     for (let day = 0; day < firstDate.getDay(); day++) {
         let nowColumn = nowRow.insertCell();

@@ -9,38 +9,46 @@
     <title>Do battle</title>
 </head>
 <body>
-    <div>
-
+    <div id="top-menu">
+        <div><img src="image/arrow.svg" onclick = "changePage('')"></div>
+        <div id="write">배틀 상세보기</div>
+        <div id="nothing"></div>
     </div>
 
-    <div>
-        <table class="Calendar">
-            <thead>
-                <tr>
-                    <td colspan="5">
-                        <span id="calYear"></span><span>.</span><span id="calMonth"></span>
-                    </td>
-                    <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
-                    <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
-                </tr>
-                <tr>
-                    <td>일</td>
-                    <td>월</td>
-                    <td>화</td>
-                    <td>수</td>
-                    <td>목</td>
-                    <td>금</td>
-                    <td>토</td>
-                </tr>
-            </thead>
+    <table class="Calendar">
+        <thead>
+            <tr>
+                <td colspan="5">
+                    <span id="calYear"></span><span>-</span><span id="calMonth"></span>
+                </td>
+                <!-- <td>
+                    <span onClick="prevCalendar();" style="cursor:pointer;">&#60;</span>
+                    <span onClick="nextCalendar();" style="cursor:pointer;">&#62;</span>
+                </td> -->
+                <td onClick="prevCalendar();" style="cursor:pointer;" class="arrow">&#60;</td>
+                <td onClick="nextCalendar();" style="cursor:pointer;" class="arrow">&#62;</td>
+            </tr>
+            <tr>
+                <td>일</td>
+                <td>월</td>
+                <td>화</td>
+                <td>수</td>
+                <td>목</td>
+                <td>금</td>
+                <td>토</td>
+            </tr>
+        </thead>
 
-            <tbody>
-            </tbody>
-        </table>
-    </div>
+        <tbody>
+        </tbody>
+    </table>
 
-    <div>
-
+    <div class="battle-result">
+        <div>8/1의 배틀 결과</div>
+        <div>
+            <div><img src="image/progress-face-1.svg"></div>
+            <div><b>김배틀</b> 님이 34% 차이로 <br>승리했어요!</div>
+        </div>
     </div>
 </body>
 </html>
