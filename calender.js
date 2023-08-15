@@ -47,7 +47,6 @@ function buildCalendar(){
         if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()){
             newDivDate.className = "today";
             // document.getElementsByClassName("today").style.color = '#FF5C00';
-            console.log(nowDay);
         }
 
         // 다음 날짜로 이동
