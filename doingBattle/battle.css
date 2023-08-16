@@ -27,11 +27,14 @@ body{
 /*배틀 날짜*/
 #battle-detail{
     display:flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin: 0px 30px;
     padding-bottom: 20px;
 }
 
+#battle-detail > div:first-child{
+    display:flex;
+}
 #detail-text{
     display:flex;
     flex-direction : column;
@@ -49,9 +52,13 @@ body{
     font-weight: bold;
 }
 
-#battle-detail > div > img{
+#battle-detail > div > div > img{
     margin-left: -20px;
     z-index: 1;
+}
+
+#battle-detail > div > img{
+    padding:15px 10px 0px 0px;
 }
 
 /*배틀 진행표*/
