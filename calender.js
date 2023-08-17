@@ -25,7 +25,7 @@ function buildCalendar(){
     }
 
     //1일 이후 달력
-    let nowDay = new Date(firstDate); //1일부터 시작
+    let nowDay = new Date(firstDate.getFullYear(), firstDate.getMonth(), firstDate.getDate(), 0, 0); //1일부터 시작 (시간 0시 0초로 맞춤)
     while (nowDay <= lastDate) {
         if (nowDay.getDay() === 0) { // 일요일인 경우 새로운 행을 추가
             nowRow = Calendar_tbody.insertRow();
@@ -35,9 +35,15 @@ function buildCalendar(){
         //불svg 넣기
         let newDivFire = document.createElement("div");
         let imgElement = document.createElement("img");
-        imgElement.src = "image/cal-fire-white.svg";  // 이미지 파일의 경로로 설정
+        //오늘 이후는 투명도 70%
+        if(today >= nowDay){
+            imgElement.src = "image/cal-fire-white.svg";
+        } else{
+            imgElement.src = "image/cal-fire-white70.svg";
+        }
         newDivFire.appendChild(imgElement);
         nowColumn.appendChild(newDivFire);
+        
         //날짜 글씨 넣기
         let newDivDate = document.createElement("div");
         newDivDate.innerHTML = nowDay.getDate();        // 추가한 열에 날짜 입력
