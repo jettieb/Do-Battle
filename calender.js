@@ -46,7 +46,7 @@ function buildCalendar(){
         //     changeDate(nowDay);
         //     console.log(nowDay);
         // };   //changeDate 함수 onclick 속성으로 추가
-        // nowColumn.appendChild(newDivFire);
+        nowColumn.appendChild(newDivFire);
 
         //불 클릭시 밑에 날짜 바뀌는
         // newDivFire.addEventListener('click', function (event){
