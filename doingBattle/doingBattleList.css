@@ -10,7 +10,7 @@ body{
     height: 150px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 #top-menubar{
@@ -39,10 +39,10 @@ body{
     margin: 0px 30px;
 }
 
-#bottom-box{
+.bottom-box{
     background-color: #FF5C00;
     color:white;
-    margin: 12px 0px;
+    margin: 20px 0px;
     height: 150px;
     border-radius: 40px;
     display:flex;
@@ -51,17 +51,17 @@ body{
     padding-left: 30px;
 }
 
-#battle-name{
+.battle-name{
     margin-top: 20px;
     font-size: 28px;
     font-weight: 500;
 }
 
-#battle-date{
+.battle-date{
     opacity: 70%;
 }
 
-#versus{
+.versus{
     font-size: 28px;
     font-weight: 600;
     margin-top: 5px;
