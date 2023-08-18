@@ -129,6 +129,7 @@ body{
 /*투두리스트*/
 #battle-bottom{
     margin-top: -40px;
+    margin-bottom: 20px;
     background-color: #FDD67C;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
@@ -148,10 +149,22 @@ body{
     margin-bottom: 7px;
 }
 
-#todo-list{
+.todo-list{
     font-size: 20px;
     margin-left: 10px;
     width: 100%;
     margin-right: -20px;
     border-bottom: white solid 2px;
+}
+
+.input-text{
+    background-color: transparent;
+    border: none;
+    border-bottom: white solid 2px;
+    width: 100%;
+    height: 40px;
+    text-align : start;
+    margin: 0px 8px;
+    font-size: 20px;
+    width: 100%;
 }
