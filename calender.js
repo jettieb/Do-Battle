@@ -1,7 +1,11 @@
-window.onload = function () {buildCalendar();}
+window.onload = function () {
+    buildCalendar();
+    document.getElementById("click-date").innerText = (nowMonth.getMonth() + 1) + '/' + today.getDate();
+}
 
 let nowMonth = new Date();  // 현재 달을 페이지를 로드한 날의 달로 초기화
 let today = new Date();     // 오늘 날 저장용
+let changeDay;  //밑에 결과창용
 
 function buildCalendar(){
     let firstDate = new Date(nowMonth.getFullYear(), nowMonth.getMonth(), 1);   //이번달 1일
@@ -42,17 +46,7 @@ function buildCalendar(){
             imgElement.src = "image/cal-fire-white70.svg";
         }
         newDivFire.appendChild(imgElement);
-        // newDivFire.onclick = function() {
-        //     changeDate(nowDay);
-        //     console.log(nowDay);
-        // };   //changeDate 함수 onclick 속성으로 추가
         nowColumn.appendChild(newDivFire);
-
-        //불 클릭시 밑에 날짜 바뀌는
-        // newDivFire.addEventListener('click', function (event){
-        //     document.getElementById("click-date").innerText = (nowDay.getMonth()+1) + '/' + nowDay.getDate(); 
-        //     console.log(nowDay.getDate());
-        // })
 
         //날짜 글씨 넣기
         let newDivDate = document.createElement("div");
@@ -62,19 +56,22 @@ function buildCalendar(){
         //오늘 날짜 주황색으로 표시
         if (nowDay.getFullYear() == today.getFullYear() && nowDay.getMonth() == today.getMonth() && nowDay.getDate() == today.getDate()){
             newDivDate.className = "today";
-            // document.getElementsByClassName("today").style.color = '#FF5C00';
         }
+
+        //밑에 날짜 뜨기 위한 id값 저장
+        nowColumn.id = nowDay.getDate();
+        newDivFire.id = nowDay.getDate();
+        //클릭시 밑에 날짜뜨는
+        newDivFire.onclick = function() {  
+            changeDay = newDivFire.id;
+            changeDate(changeDay); 
+        }; 
 
         // 다음 날짜로 이동
         nowDay.setDate(nowDay.getDate() + 1); 
-
-        function changeDate(clickedDate) {
-            let clickDate = clickedDate.getDate();
-            document.getElementById("click-date").innerText = (nowMonth.getMonth() + 1) + '/' + clickDate;
-            console.log(clickDate);
-        }
     }
 }
+
 
 function prevCalendar(){
     nowMonth.setMonth(nowMonth.getMonth()-1);
@@ -86,17 +83,8 @@ function nextCalendar(){
     buildCalendar();
 }
 
-// function changeDate(){
-//     let clickFire = document.querySelector("tbody");
-//     for(let i=1; i<clickFire.rows.length; i++){
-//         for(let j=1; j<clickFire.rows[1].cells.length; j++){
-//             clickFire.rows[i].cells[j].newDivFire.onclick = function(){
-//                 let clickDate = clickFire.rows[i].cells[j].newDivDate.innerText;
-//                 document.getElementById("click-date").innerText = (nowMonth.getMonth()+1) + '/' + clickDate;
-//                 console.log(clickDate);
-//             }
-//         }
-//     }
-//     // document.getElementById("click-date").innerText = (nowDay.getMonth()+1) + '/' + nowDay.getDate(); 
-//     // console.log(nowDay.getDate());
-// }
+function changeDate(date){
+    let getWithId = document.getElementById(String(date));
+    let realDay = getWithId.innerText;
+    document.getElementById("click-date").innerText = (nowMonth.getMonth() + 1) + '/' + realDay;
+}
