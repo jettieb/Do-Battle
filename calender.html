@@ -6,11 +6,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="calender.css" rel="stylesheet">
     <script src="calender.js"></script>
+    <script src="changePage.js"></script>
     <title>Do battle</title>
 </head>
 <body>
     <div id="top-menu">
-        <div><img src="image/arrow.svg" onclick = "changePage('')"></div>
+        <div><img src="image/arrow.svg" onclick = "changePage('../doingBattle/battle.html')"></div>
         <div id="write">배틀 상세보기</div>
         <div id="nothing"></div>
     </div>
@@ -44,7 +45,7 @@
     </table>
 
     <div class="battle-result">
-        <div>8/1의 배틀 결과</div>
+        <div><span id = "click-date"></span>의 배틀 결과</div>
         <div>
             <div><img src="image/progress-face-1.svg"></div>
             <div><b>김배틀</b> 님이 34% 차이로 <br>승리했어요!</div>

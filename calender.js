@@ -42,8 +42,18 @@ function buildCalendar(){
             imgElement.src = "image/cal-fire-white70.svg";
         }
         newDivFire.appendChild(imgElement);
-        nowColumn.appendChild(newDivFire);
-        
+        // newDivFire.onclick = function() {
+        //     changeDate(nowDay);
+        //     console.log(nowDay);
+        // };   //changeDate 함수 onclick 속성으로 추가
+        // nowColumn.appendChild(newDivFire);
+
+        //불 클릭시 밑에 날짜 바뀌는
+        // newDivFire.addEventListener('click', function (event){
+        //     document.getElementById("click-date").innerText = (nowDay.getMonth()+1) + '/' + nowDay.getDate(); 
+        //     console.log(nowDay.getDate());
+        // })
+
         //날짜 글씨 넣기
         let newDivDate = document.createElement("div");
         newDivDate.innerHTML = nowDay.getDate();        // 추가한 열에 날짜 입력
@@ -57,6 +67,12 @@ function buildCalendar(){
 
         // 다음 날짜로 이동
         nowDay.setDate(nowDay.getDate() + 1); 
+
+        function changeDate(clickedDate) {
+            let clickDate = clickedDate.getDate();
+            document.getElementById("click-date").innerText = (nowMonth.getMonth() + 1) + '/' + clickDate;
+            console.log(clickDate);
+        }
     }
 }
 
@@ -70,6 +86,17 @@ function nextCalendar(){
     buildCalendar();
 }
 
-// document.addEventListener('mouseover', function (event) {
-    
-// });
+// function changeDate(){
+//     let clickFire = document.querySelector("tbody");
+//     for(let i=1; i<clickFire.rows.length; i++){
+//         for(let j=1; j<clickFire.rows[1].cells.length; j++){
+//             clickFire.rows[i].cells[j].newDivFire.onclick = function(){
+//                 let clickDate = clickFire.rows[i].cells[j].newDivDate.innerText;
+//                 document.getElementById("click-date").innerText = (nowMonth.getMonth()+1) + '/' + clickDate;
+//                 console.log(clickDate);
+//             }
+//         }
+//     }
+//     // document.getElementById("click-date").innerText = (nowDay.getMonth()+1) + '/' + nowDay.getDate(); 
+//     // console.log(nowDay.getDate());
+// }
