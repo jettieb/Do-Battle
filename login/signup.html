@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +17,10 @@
 
     <div id="signup-bottom">
         <div id="signup-write">회원가입</div>
-        <div id="getInform">
-            <input type="text" placeholder="사용 닉네임" required  id="battle-name">
-            <input type="text" placeholder="ID" required  id="battle-id">
-            <input type="password" placeholder="PW" required  id="battle-pw">
+        <form id="getInform" action="/signup" method="post">
+            <input type="text" name="username" placeholder="사용 닉네임" required  id="battle-name">
+            <input type="text" name="identify" placeholder="ID" required  id="battle-id">
+            <input type="password" name="password" placeholder="PW" required  id="battle-pw">
             <input type="password" placeholder="PW 재확인" required  id="battle-pwre">
             <div id="agree">
                 <label>두 배틀의 이용 약관에 동의합니다.</label>
@@ -31,7 +31,9 @@
                 <input type="checkbox" id="agreecheck" required>
             </div>
             <input type="submit" value="회원가입하기" id="button" onclick = "changePage('../main/main.html')">
-        </div>
+        </form>
     </div>
+
+    <p th:if="${param.error}" class="error-message">이미 사용 중인 아이디입니다.</p>
 </body>
 </html>
