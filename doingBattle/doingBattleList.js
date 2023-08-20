@@ -1,7 +1,7 @@
 window.onload = function () { makeList(); }
 
 function makeList(){
-    for(let i=1; i<=3; i++){ //i 개수는 백이랑 연결
+    for(let i=1; i<=5; i++){ //i 개수는 백이랑 연결
         let mainBox = document.createElement("div");    //가장 바깥 div
         mainBox.className = "bottom-box";
         mainBox.id = i; //몇번째 상자인지 체크용
