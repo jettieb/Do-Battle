@@ -149,6 +149,12 @@ body{
     padding-top: 12px;
 }
 
+#battle-bottom > form{  /*중복이니까 수정*/
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
 #todo-main{
     font-size: 30px;
     font-weight: bold;
@@ -175,4 +181,24 @@ body{
     margin: 0px 8px;
     font-size: 20px;
     width: 100%;
+}
+
+label {
+    display: inline-block;
+    height: 45px;
+    width: 35px;
+    background-repeat: no-repeat;
+    background-image: url('../image/todo-fire.svg'); 
+    background-size: 35px 45px; /* 가로값 세로값 */
+    cursor: pointer;
+    padding-left: 7px;
+    /*margin-left: 23px;*/
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked + label { 
+    background-image: url('../image/cal-fire-orange.svg'); 
 }
