@@ -38,5 +38,13 @@ body{
 }
 
 #logout{
-    
+    text-align:right;
+    font-size: 18px;
+    padding-right: 60px;
+    color:grey; 
+}
+
+#logout > a{
+    text-decoration: none;
+    color:grey; 
 }
