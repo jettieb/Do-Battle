@@ -1,0 +1,83 @@
+body{
+    background-color:  #FFF7E8;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin: 0px;
+}
+
+#write{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+#real-top{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/*상단바*/
+#battle-top{
+    display:flex;
+    justify-content: space-between;
+    padding: 50px 30px 0px 30px;
+}
+
+#nothing{
+    width: 40px;
+}
+
+/*배틀 날짜*/
+#battle-detail{
+    display:flex;
+    justify-content: space-between;
+    margin: 0px 30px;
+    padding-bottom: 20px;
+}
+
+#battle-detail > div:first-child{
+    display:flex;
+}
+#detail-text{
+    display:flex;
+    flex-direction : column;
+    justify-content: center;
+    z-index: 2;
+}
+
+#date{
+    font-size: 18px;
+    z-index: 2;
+}
+
+#name{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#battle-detail > div > div > img{
+    margin-left: -20px;
+    z-index: 1;
+}
+
+#battle-detail > div > img{
+    padding:15px 10px 0px 0px;
+}
+
+/*배틀 진행표*/
+
+
+/*누가 앞서고 있는지 표시*/
+#text{
+    padding: 20px 30px 60px 30px;
+    font-size: 22px;
+}
+
+#battle-consi{
+    background-color: #ffc94d;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    
+}
